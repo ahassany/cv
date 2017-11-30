@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 \usepackage{xspace}
 \newcommand\eat[1]{}
 %\newcommand{\ie}{{\it i.e.,}\xspace}
@@ -64,15 +64,19 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 \section{Research Interests}
-Networks, Software-Defined Networks, Systems, Distributed Systems, Program Synthesis. %, High Performance Computing. Networks Programmability
+\cvline{}{Networks, Software-Defined Networks, Systems, Distributed Systems, Program Synthesis.}
 
+ \medskip
+ 
 \section{Education}
 \cventry{2015--present}{PhD student}{ETH Z\"urich}{Switzerland}{}{\emph{Advised by:} Prof. Laurent Vanbever}  %
 %\cventry{2011--2015}{PhD student (not finished)}{Indiana University}{Bloomington, IN}{}{GPA 3.80/4.0}  % arguments 3 to 6 can be left empty
 \cventry{2009--2011}{M.S. Computer Science}{University of Delaware}{Newark, DE}{}{}%{GPA 3.58/4.0}
 \cventry{2003--2008}{B.Sc. Computer Engineering}{Islamic University of Gaza}{Gaza, Palestine}{}{}%{GPA 82.5/100}
 
-
+ \medskip
+ 
+ 
 \section{Awards}
 \cvlistitem{Fulbright Foreign Student Scholarship for Master's program, 2009-2011.}
 \cvlistitem{2\textsuperscript{nd} place winner team at IEEE/ACM Supercomputer Conference 2009 High Performance Computing Contest.}
@@ -93,10 +97,12 @@ Networks, Software-Defined Networks, Systems, Distributed Systems, Program Synth
 
 %\cvlistitem { \textbf{GEMINI}: Develop and deploy instrumentation and measurement framework, capable of supporting the needs of both GENI experimenters and GENI infrastructure operators. It uses the perfSONAR system as its basis, and includes additional capabilities being developed by key GENI I\&M projects. It collects and manages both substrate metrics as well as slice-specific measurements. It introduces a GENI Global I\&M Information Service so that GEMINI components can locate one another, locate measurement sources and data, and correlate measurement data to physical and virtual network topology. It includes access control for instrumentation infrastructure, measurements, and measurement data based on GENI policy and authorization mechanisms.\\ \emph{GEMINI} tools are currently used to instrument and measure GENI experiments: \url{http://groups.geni.net/geni/wiki/GEMINI/Tutorial}.\\ \emph{GEMINI} APIs and data models are used by the GENI network operators to to expose physcial infrastructure information to the users \url{http://groups.geni.net/geni/wiki/OperationalMonitoring/DataSchema}. }
 
+ \medskip
+ 
 \section{Publications}
 \nociteconference{*}
 \bibliographystyleconference{IEEEtran}
-\bibliographyconference{conference}                   % 'publications' is the name of a BibTeX file
+\bibliographyconference{IEEEabrv,conference}                   % 'publications' is the name of a BibTeX file
 
 \nociteworkshop{*}
 \bibliographystyleworkshop{IEEEtran}
@@ -104,7 +110,7 @@ Networks, Software-Defined Networks, Systems, Distributed Systems, Program Synth
 
 
 \nocitetrs{*}
-\bibliographystyletrs{plainyr-rev}
+\bibliographystyletrs{IEEEtran}
 \bibliographytrs{tr}                   % 'publications' is the name of a BibTeX file
 
 \nocitedemos{*}
@@ -112,28 +118,53 @@ Networks, Software-Defined Networks, Systems, Distributed Systems, Program Synth
 \bibliographydemos{demos}                   % 'publications' is the name of a BibTeX file
 
 
+ \medskip
 
+ \section{Presentations and invited talks}
+ 
+\cventry{}{ Network-wide Configuration Synthesis}{}{}{}{\begin{itemize}
+\item Computer Aided Verification (CAV'17), talk available at \httplink[]{hhttps://youtu.be/dUbFWtHLTCI}, July 2017 Heidelberg Germany
+\item Workshop on Network Verification  \httplink{hhttp://network-programming.org/wnv/}. April 2017. Palo Alto, CA, US.
+\end{itemize}
+}
+ 
+\cventry{}{BigBug: Practical Concurrency Analysis for SDN }{}{}{}{\begin{itemize}
+\item ACM SIGPLAN conference on Programming Language Design and Implementation (PLDI'16), talk available at \httplink[]{hhttps://youtu.be/QzYBOc3G9FU}. June 2016. Santa Barbara, CA, US.
+\end{itemize}
+}
+
+\cventry{}{SDNRacer: Concurrency Analysis for Software-Defined Networks}{}{}{}{\begin{itemize}
+\item ACM Symposium on SDN Research (SOSR). April 2017. Santa Clara, CA, US.
+\end{itemize}
+}
+
+\cventry{}{UNIS: Design and Implementation of a Unified Network Information Service}{}{}{}{\begin{itemize}
+\item IEEE Conference on Services Computing (IEEE SCC). July 2013. Santa Clara, CA US.
+\end{itemize}
+}
+
+ \medskip
+ 
 \section{Professional Experience}
 
 % -------------- ETH--------------------
 \cventry{June '15 -- Present}{Research Assistant}{ETH Z\"urich}{Switzerland}{}{\begin{itemize}
-  %\item Network Programmability.
-  \item SDN Verification \url{http://sdnracer.ethz.ch}. Published in \cite{bigbug, sdnracer2, sdnracer}.
   \item Network-wide Configuration Synthesis \url{http://synet.ethz.ch}. Published in \cite{synet-cav, synet-arxiv}.
+  \item SDN Verification \url{http://sdnracer.ethz.ch}. Published in \cite{bigbug, sdnracer2, sdnracer}.
 \end{itemize}}
 
 
 % -------------- IU 2nd --------------------
 \cventry{Spring '15}{Research Associate}{Indiana University}{Bloomington, IN}{}{\begin{itemize}
 \item Measured garbage collector and data serialization overhead for unstructured data.
-\item Worked on developing efficient methods for representing data in Haskell's runtime system. Published in \cite{cnf}.
+\item Developed efficient methods for representing data in Haskell's runtime system. Published in \cite{cnf}.
 \end{itemize}}
 
 % -------------- ICSI --------------------
-\cventry{July '13 -- Nov. '14}{Research Scientist}{International Computer Science Institute}{Berkeley, CA}{}{\begin{itemize}
-\item Worked designing and building next generation SDN architecture (SDNv2).
-\item Work on integrating STS project with ONOS; an open source SDN controller \url{http://onosproject.org/} and our work is published in \cite{scott2014trooubleshooting}.
-\item Help ONOS QA team adopt parts of STS in their testing infrastructure.
+\cventry{July 2013 -- Nov. '14}{Research Scientist}{International Computer Science Institute}{Berkeley, CA}{}{\begin{itemize}
+\item Worked with Prof. Scott Shenker group on designing and building next generation SDN architecture (SDNv2).
+\item Integrated research systems for troubleshoting SDN controllers wtith ONOS; an open source SDN controller \url{http://onosproject.org/}. Published in \cite{scott2014trooubleshooting}.
+\item Helped ONOS QA team adopt parts of STS in their testing infrastructure.
 \end{itemize}}
 
 % -------------- ESnet --------------------
@@ -155,7 +186,7 @@ Networks, Software-Defined Networks, Systems, Distributed Systems, Program Synth
 % -------------- LBL --------------------
 \cventry{Summer '10}{Summer Student}{Lawrence Berkeley National Laboratory}{Berkeley, CA}{}{\begin{itemize}
 \item Worked at the Center for Enabling Distributed Petascale Computing (CEDPS) project.
-\item Worked on designing and building system to collect, represent and analyze large scale  monitoring data for high-speed data transfers in DOE networks.
+\item Designed and built system to collect, represent and analyze large scale  monitoring data for high-speed data transfers in DOE networks.
 \item \emph{Technology used:} Java, Python, Tornado, MongoDB.
 \end{itemize}}
 
@@ -196,7 +227,7 @@ Networks, Software-Defined Networks, Systems, Distributed Systems, Program Synth
 \item \emph{Technology used:} Visual Basic. NET, Microsoft SQL Server.
 \end{itemize}}
 
-
+ \medskip
 
 \section{Activities and Services}
 \cvlistitem{Reviewer: IEEE/ACM Transactions on Networking.}
