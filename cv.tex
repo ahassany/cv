@@ -8,6 +8,8 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 \usepackage{xspace}
+
+
 \newcommand\eat[1]{}
 %\newcommand{\ie}{{\it i.e.,}\xspace}
 
@@ -39,7 +41,7 @@
 %\phone[fax]{+3~(456)~789~012}
 \email{eahmed@ethz.ch}                               % optional, remove / comment the line if not wanted
 \renewcommand*\httplink[2][]{{\urlstyle{sf}\expandafter\href#2}}
-\homepage{{https://hassany.ps}{https://hassany.ps}}                         % optional, remove / comment the line if not wanted
+\homepage{{https://hassany.ps}{hassany.ps}}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{ahassany}                              % optional, remove / comment the line if not wanted
@@ -95,7 +97,7 @@
 %Software bugs are inevitable in software-defined networking control software, and troubleshooting is a tedious, time-consuming task. We worked on developing techniques for automatically identifying a minimal sequence of inputs responsible for triggering a given bug in control software, without making assumptions about the language or instrumentation of the software under test. We apply our technique to five open source SDN control platforms --Foodlight, NOX, POX, Pyretic, ONOS-- and illustrate how the minimal causal sequences our system found aided the troubleshooting process.\\
 % ONOS quality assurance team uses parts of \emph{STS} for integration and continuous operation test suits.}
 
-%\cvlistitem { \textbf{GEMINI}: Develop and deploy instrumentation and measurement framework, capable of supporting the needs of both GENI experimenters and GENI infrastructure operators. It uses the perfSONAR system as its basis, and includes additional capabilities being developed by key GENI I\&M projects. It collects and manages both substrate metrics as well as slice-specific measurements. It introduces a GENI Global I\&M Information Service so that GEMINI components can locate one another, locate measurement sources and data, and correlate measurement data to physical and virtual network topology. It includes access control for instrumentation infrastructure, measurements, and measurement data based on GENI policy and authorization mechanisms.\\ \emph{GEMINI} tools are currently used to instrument and measure GENI experiments: \url{http://groups.geni.net/geni/wiki/GEMINI/Tutorial}.\\ \emph{GEMINI} APIs and data models are used by the GENI network operators to to expose physcial infrastructure information to the users \url{http://groups.geni.net/geni/wiki/OperationalMonitoring/DataSchema}. }
+%\cvlistitem { \textbf{GEMINI}: Develop and deploy instrumentation and measurement framework, capable of supporting the needs of both GENI experimenters and GENI infrastructure operators. It uses the perfSONAR system as its basis, and includes additional capabilities being developed by key GENI I\&M projects. It collects and manages both substrate metrics as well as slice-specific measurements. It introduces a GENI Global I\&M Information Service so that GEMINI components can locate one another, locate measurement sources and data, and correlate measurement data to physical and virtual network topology. It includes access control for instrumentation infrastructure, measurements, and measurement data based on GENI policy and authorization mechanisms.\\ \emph{GEMINI} tools are currently used to instrument and measure GENI experiments: \href{http://groups.geni.net/geni/wiki/GEMINI/Tutorial}{http://groups.geni.net/geni/wiki/GEMINI/Tutorial}.\\ \emph{GEMINI} APIs and data models are used by the GENI network operators to to expose physcial infrastructure information to the users \href{http://groups.geni.net/geni/wiki/OperationalMonitoring/DataSchema}{http://groups.geni.net/geni/wiki/OperationalMonitoring/DataSchema}. }
 
  \medskip
  
@@ -123,13 +125,13 @@
  \section{Presentations and invited talks}
  
 \cventry{}{ Network-wide Configuration Synthesis}{}{}{}{\begin{itemize}
-\item Computer Aided Verification (CAV'17), talk available at \httplink[]{hhttps://youtu.be/dUbFWtHLTCI}, July 2017 Heidelberg Germany
-\item Workshop on Network Verification  \httplink{hhttp://network-programming.org/wnv/}. April 2017. Palo Alto, CA, US.
+\item Computer Aided Verification (CAV'17), talk available at \href{https://youtu.be/dUbFWtHLTCI}{https://youtu.be/dUbFWtHLTCI}, July 2017 Heidelberg Germany
+\item Workshop on Network Verification \href{http://network-programming.org/wnv/}{http://network-programming.org/wnv/}. April 2017. Palo Alto, CA, US.
 \end{itemize}
 }
  
 \cventry{}{BigBug: Practical Concurrency Analysis for SDN }{}{}{}{\begin{itemize}
-\item ACM SIGPLAN conference on Programming Language Design and Implementation (PLDI'16), talk available at \httplink[]{hhttps://youtu.be/QzYBOc3G9FU}. June 2016. Santa Barbara, CA, US.
+\item ACM SIGPLAN conference on Programming Language Design and Implementation (PLDI'16), talk available at \href{https://youtu.be/QzYBOc3G9FU}{https://youtu.be/QzYBOc3G9FU}. June 2016. Santa Barbara, CA, US.
 \end{itemize}
 }
 
@@ -147,23 +149,30 @@
  
 \section{Professional Experience}
 
+% -------------- Facebook--------------------
+\cventry{Summer '18}{Software Engineer Intern}{Facebook}{Menlo Park, CA}{}{\begin{itemize}
+  \item Network Verification.
+\end{itemize}}
+
+
+
 % -------------- ETH--------------------
 \cventry{June '15 -- Present}{Research Assistant}{ETH Z\"urich}{Switzerland}{}{\begin{itemize}
-  \item Network-wide Configuration Synthesis \url{http://synet.ethz.ch}. Published in \cite{synet-cav, synet-arxiv}.
-  \item SDN Verification \url{http://sdnracer.ethz.ch}. Published in \cite{bigbug, sdnracer2, sdnracer}.
+  \item Network-wide Configuration Synthesis \href{http://synet.ethz.ch}{http://synet.ethz.ch}. Published in \cite{netcomplete, synet-cav, synet-arxiv}.
+  \item SDN Verification \href{http://sdnracer.ethz.ch}{http://sdnracer.ethz.ch}. Published in \cite{bigbug, sdnracer2, sdnracer}.
 \end{itemize}}
 
 
 % -------------- IU 2nd --------------------
 \cventry{Spring '15}{Research Associate}{Indiana University}{Bloomington, IN}{}{\begin{itemize}
 \item Measured garbage collector and data serialization overhead for unstructured data.
-\item Developed efficient methods for representing data in Haskell's runtime system. Published in \cite{cnf}.
+\item Developed efficient method for representing data in Haskell's runtime system. Published in \cite{cnf}.
 \end{itemize}}
 
 % -------------- ICSI --------------------
 \cventry{July '13 -- Nov. '14}{Research Scientist}{International Computer Science Institute}{Berkeley, CA}{}{\begin{itemize}
 \item Worked with Prof. Scott Shenker group on designing and building next generation SDN architecture (SDNv2).
-\item Integrated research systems for troubleshoting SDN controllers wtith ONOS; an open source SDN controller \url{http://onosproject.org/}. Published in \cite{scott2014trooubleshooting}.
+\item Integrated research systems for troubleshoting SDN controllers wtith ONOS; an open source SDN controller \href{http://onosproject.org/}{http://onosproject.org/}. Published in \cite{scott2014trooubleshooting}.
 \item Helped ONOS QA team adopt parts of STS in their testing infrastructure.
 \end{itemize}}
 
