@@ -30,6 +30,8 @@
 
 \newcommand\AH[1]{\textcolor{red}{#1}}
 \newcommand{\myname}[1]{\textbf{#1}}
+\def\industry{}
+\def\pic{}
 
 
 % personal data
@@ -46,7 +48,9 @@
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{ahassany}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\ifdefined\pic
+	\photo[64pt][0.4pt]{pic.jpeg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\fi
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
@@ -64,19 +68,42 @@
 \begin{document}
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-\input{research-interests}
-\medskip
+
+\ifdefined\industry
+\input{industry-interests} \medskip
+\else
+\input{research-interests} \medskip
+\fi
+
 \input{education}
 \medskip
-\input{awards}
-\medskip
-%\input{projects}
-%\medskip
-\input{pubs.tex}
-\medskip
-\input{presentations}
-\medskip
-\input{experience}
-\medskip
-\input{activities}
+\ifdefined\industry
+	\medskip
+	\input{experience}
+	\medskip
+	\input{awards}
+	\medskip
+	\input{activities}
+	\medskip
+	\input{presentations}
+	%\input{projects}
+	%\medskip
+	\input{pubs.tex}	
+\else
+	\medskip
+	\input{experience}
+	\medskip
+	\input{awards}
+	\medskip
+	\input{activities}
+	\medskip
+	%\input{projects}
+	%\medskip
+	\input{presentations}
+	\medskip
+	\input{pubs.tex}
+
+	
+	
+\fi
 \end{document}
