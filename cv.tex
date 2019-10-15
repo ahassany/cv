@@ -29,14 +29,16 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.80]{geometry}
+%\usepackage[scale=0.83]{geometry}
+\usepackage[margin=2.1cm,scale=0.75]{geometry} % Reduce document margins-- ,scale=0.75
+
 \setlength{\hintscolumnwidth}{3.2cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \newcommand\AH[1]{\textcolor{red}{#1}}
 \newcommand{\myname}[1]{\textbf{#1}}
 \def\industry{}
-%\def\pic{}
+\def\pic{}
 
 
 % personal data
@@ -52,10 +54,10 @@
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{ahassany}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\nationality{Palestinian}
+\nationality{Palestinian, B-Permit}
 \birthday{Born April 1\textsuperscript{st}, 1986}
 \ifdefined\pic
-	\photo[64pt][0.4pt]{pic.jpeg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+	\photo[64pt][0.4pt]{pic3.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 \fi
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
@@ -87,6 +89,7 @@
 \ifdefined\industry
 	\input{experience}
 	\medskip
+  \newpage
 	\input{awards}
 	\medskip
 	\input{activities}
@@ -96,8 +99,12 @@
 	%\input{projects}
   \input{students.tex}
 	\medskip
-  \newpage
+  \input{languages.tex}
+	\medskip
+%  \newpage
 	\input{pubs.tex}	
+  \medskip
+  \input{refs.tex}
 	%\medskip
 	
 \else
@@ -115,6 +122,8 @@
 	\input{activities}
 	\medskip
 	\input{students.tex}
+  \input{languages.tex}
+	\medskip
 
 	
 \fi
