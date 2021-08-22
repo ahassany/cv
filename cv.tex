@@ -11,6 +11,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
+\usepackage{fontawesome}
 
 \setlist[itemize]{itemsep=0.3em, align=left, label=\itemlabel}
 
@@ -38,6 +39,7 @@
 \newcommand\AH[1]{\textcolor{red}{#1}}
 \newcommand{\myname}[1]{\textbf{#1}}
 \def\industry{}
+%\def\contactInfo{}
 \def\pic{}
 
 
@@ -45,14 +47,17 @@
 \name{Ahmed}{Elhassany}
 %\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
 %\address{1639 Oxford St, APT 3}{Berkeley, CA 94709}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\ifdefined\contactInfo
 \address{Klingenstr. 40, 8005 Z\"urich}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+41~76~730~87~96}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\fi
 \email{a.hassany@gmail.com}                               % optional, remove / comment the line if not wanted
 %\renewcommand*\httplink[2][]{{\urlstyle{sf}\expandafter\href{#2}}
 \homepage{hassany.ps}                         % optional, remove / comment the line if not wanted
-%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[linkedin]{ahassany}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{ahassany}                              % optional, remove / comment the line if not wanted
+\social[medium]{@ahassany}
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 \nationality{Palestinian, B-Permit}
 \birthday{Born April 1\textsuperscript{st}, 1986}
@@ -84,12 +89,13 @@
 \input{research-interests} \medskip
 \fi
 
-\input{education}
-\medskip
+
 \ifdefined\industry
 	\input{experience}
 	\medskip
-  \newpage
+%  \newpage
+	\input{education}
+	\medskip
 	\input{awards}
 	\medskip
 	\input{activities}
