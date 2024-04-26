@@ -62,7 +62,7 @@
 \nationality{Palestinian, B-Permit}
 \birthday{Born April 1\textsuperscript{st}, 1986}
 \ifdefined\pic
-	\photo[64pt][0.4pt]{pic3.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+	\photo[64pt][0.4pt]{pic-small.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 \fi
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
@@ -93,6 +93,8 @@
 \ifdefined\industry
 	\input{experience}
 	\medskip
+	\medskip
+  \input{opensource.tex}	
 	\input{education}
 	\medskip
 	  \input{languages.tex}
@@ -105,8 +107,8 @@
 	\medskip
   \input{students.tex}
 
-	\medskip
-	\input{pubs.tex}	
+  \medskip
+  \input{pubs.tex}	
   \medskip
   \input{refs.tex}
 	%\medskip
